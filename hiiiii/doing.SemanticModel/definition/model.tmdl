@@ -14,6 +14,8 @@ annotation PBIDesktopVersion = 2.130.930.0 (24.06)
 
 annotation PBI_ProTooling = ["DevMode"]
 
+annotation __PBIService_Versioning_SaveVersion = 353d1224-6d65-48f6-a237-3c0d59103678
+
 ref table Table1
 ref table DateTableTemplate_3832fa0c-aac1-4dfd-bc84-8ee6852b4f5e
 
