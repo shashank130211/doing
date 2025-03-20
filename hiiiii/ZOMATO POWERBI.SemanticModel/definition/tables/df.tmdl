@@ -1,0 +1,31 @@
+table df
+	lineageTag: 911be4c4-1083-426b-ade1-832c94e6defc
+
+	column 'Order Type'
+		dataType: string
+		lineageTag: 03db49e1-474a-409d-bbd2-24f8c00f08b7
+		summarizeBy: none
+		sourceColumn: Order Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category
+		dataType: string
+		lineageTag: fe3ce296-f546-4858-ac51-8ff94a0a978d
+		summarizeBy: none
+		sourceColumn: Category
+
+		annotation SummarizationSetBy = Automatic
+
+	partition df = m
+		mode: import
+		source =
+				let
+				    Source = Python.Execute("import pandas as pd#(lf)#(lf)def categorize_order(order_type):#(lf)    if order_type.lower() == ""take away"":#(lf)        return ""Self Pickup""#(lf)    elif order_type.lower() == ""deliver"":#(lf)        return ""Home Delivery""#(lf)    else:#(lf)        return ""Unknown""#(lf)#(lf)# Example usage in a DataFrame#(lf)data = {""Order Type"": [""Take Away"", ""Deliver"", ""Take Away"", ""Deliver"", ""Unknown""]}#(lf)df = pd.DataFrame(data)#(lf)df[""Category""] = df[""Order Type""].apply(categorize_order)#(lf)#(lf)print(df)#(lf)#(lf)"),
+				    df1 = Source{[Name="df"]}[Value],
+				    #"Changed Type" = Table.TransformColumnTypes(df1,{{"Order Type", type text}, {"Category", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

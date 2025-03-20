@@ -1,0 +1,148 @@
+{
+  "config": "{\"version\":\"5.55\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU06\",\"version\":\"5.55\",\"type\":2},\"customTheme\":{\"name\":\"Accessible_Neutral7374245425546317.json\",\"version\":\"5.55\",\"type\":1}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"slowDataSourceSettings\":{\"isCrossHighlightingDisabled\":false,\"isSlicerSelectionsButtonEnabled\":false,\"isFilterSelectionsButtonEnabled\":false,\"isFieldWellButtonEnabled\":false,\"isApplyAllButtonEnabled\":false},\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true,\"useEnhancedTooltips\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "pods": [
+    {
+      "boundSection": "eade1dc09d0d2394cc57",
+      "config": "{\"acceptsFilterContext\":1}",
+      "name": "5e4fc9f54481b1039863"
+    }
+  ],
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU06",
+            "path": "BaseThemes/CY24SU06.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    },
+    {
+      "resourcePackage": {
+        "items": [
+          {
+            "name": "Accessible_Neutral7374245425546317.json",
+            "path": "Accessible_Neutral7374245425546317.json",
+            "type": 100
+          },
+          {
+            "name": "ZOMATO.NS_BIG5137552091764086.png",
+            "path": "ZOMATO.NS_BIG5137552091764086.png",
+            "type": 100
+          }
+        ],
+        "name": "RegisteredResources",
+        "type": 1
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{\"objects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#940712'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"81D\"}}}}}],\"outspace\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#940712'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"81D\"}}}}}]}}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "eade1dc09d0d2394cc57",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"00e33f24a064fae21a02\",\"layouts\":[{\"id\":0,\"position\":{\"x\":31.560997671652792,\"y\":498.1148762960854,\"z\":7000,\"width\":266.21015427394093,\"height\":130.36064255682675,\"tabOrder\":7000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"Sum(df (2).Total_Orders)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"df (2)\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Total_Orders\"}},\"Function\":0},\"Name\":\"Sum(df (2).Total_Orders)\",\"NativeReferenceName\":\"Sum of Total_Orders\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Total_Orders\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#DB6F78'\"}}}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"visualHeader\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 130.36,
+          "width": 266.21,
+          "x": 31.56,
+          "y": 498.11,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"045f94ddb1e6f85f19db\",\"layouts\":[{\"id\":0,\"position\":{\"x\":351.2876262583963,\"y\":32.93321496172465,\"z\":1000,\"width\":445.9706192733547,\"height\":315.6099767165279,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"donutChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(zomato_restaurants_in_India.takeaway)\"},{\"queryRef\":\"CountNonNull(df.Category)\"}],\"Category\":[{\"queryRef\":\"zomato_restaurants_in_India.delivery\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"z\",\"Entity\":\"zomato_restaurants_in_India\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"df\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"z\"}},\"Property\":\"takeaway\"}},\"Function\":0},\"Name\":\"Sum(zomato_restaurants_in_India.takeaway)\",\"NativeReferenceName\":\"Sum of takeaway\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"z\"}},\"Property\":\"delivery\"},\"Name\":\"zomato_restaurants_in_India.delivery\",\"NativeReferenceName\":\"Sum of delivery\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Category\"}},\"Function\":2},\"Name\":\"CountNonNull(df.Category)\",\"NativeReferenceName\":\"Count of Category1\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"z\"}},\"Property\":\"takeaway\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#904349'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"52D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 315.61,
+          "width": 445.97,
+          "x": 351.29,
+          "y": 32.93,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"6cd083b3f520c50983cc\",\"layouts\":[{\"id\":0,\"position\":{\"x\":31.560997671652792,\"y\":156.4327710681921,\"z\":2000,\"width\":266.21015427394093,\"height\":133.10507713697046,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"CountNonNull(zomato_restaurants_in_India.rating_text)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"z\",\"Entity\":\"zomato_restaurants_in_India\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"z\"}},\"Property\":\"rating_text\"}},\"Function\":5},\"Name\":\"CountNonNull(zomato_restaurants_in_India.rating_text)\",\"NativeReferenceName\":\"Count of rating_text\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"z\"}},\"Property\":\"rating_text\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"value\":[{\"properties\":{\"underline\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":9,\"Percent\":0}}}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#ED8C93'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"32D\"}}}}}],\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filteread7eebd4285deb257cb\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"zomato_restaurants_in_India\"}},\"Property\":\"rating_text\"}},\"type\":\"Categorical\",\"howCreated\":1}]",
+          "height": 133.11,
+          "width": 266.21,
+          "x": 31.56,
+          "y": 156.43,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"716863b24b6559c4f012\",\"layouts\":[{\"id\":0,\"position\":{\"x\":817.8415048828289,\"y\":10.977738320574884,\"z\":3000,\"width\":425.3873599222768,\"height\":337.5654533576777,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"qnaVisual\",\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"hiddenProperties\":[{\"properties\":{\"savedUtterance\":{\"expr\":{\"Literal\":{\"Value\":\"'total average cost for two'\"}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#904349'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"58D\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"visualHeader\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "height": 337.57,
+          "width": 425.39,
+          "x": 817.84,
+          "y": 10.98,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"7856b13da7a47380e28d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":817.8415048828289,\"y\":378.73197205983354,\"z\":6000,\"width\":425.3873599222768,\"height\":341.68210522789326,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"funnel\",\"projections\":{\"Category\":[{\"queryRef\":\"df (2).City\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(df (2).Total_Orders)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"df (2)\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"City\"},\"Name\":\"df (2).City\",\"NativeReferenceName\":\"City\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Total_Orders\"}},\"Function\":0},\"Name\":\"Sum(df (2).Total_Orders)\",\"NativeReferenceName\":\"Sum of Total_Orders\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Total_Orders\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#722205'\"}}}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"62D\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#904349'\"}}}}}}}],\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 341.68,
+          "width": 425.39,
+          "x": 817.84,
+          "y": 378.73,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"7b4f26efcc5687c9cda7\",\"layouts\":[{\"id\":0,\"position\":{\"x\":9.605521030503024,\"y\":10.977738320574884,\"z\":0,\"width\":382.8486239300491,\"height\":194.8548551902042,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"\"}]}]}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#ED8C93'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"100D\"}}}}}],\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"padding\":[{\"properties\":{\"right\":{\"expr\":{\"Literal\":{\"Value\":\"6D\"}}},\"top\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}},\"left\":{\"expr\":{\"Literal\":{\"Value\":\"20D\"}}},\"bottom\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"visualHeader\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 194.85,
+          "width": 382.85,
+          "x": 9.61,
+          "y": 10.98,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"90a15f95ff0995f97fb4\",\"layouts\":[{\"id\":0,\"position\":{\"x\":351.2876262583963,\"y\":445.9706192733547,\"z\":8000,\"width\":445.9706192733547,\"height\":255.23241595336606,\"tabOrder\":8000}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"df (2).City\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(df (2).Total_Revenue_Lakhs)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"df (2)\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"City\"},\"Name\":\"df (2).City\",\"NativeReferenceName\":\"City\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Total_Revenue_Lakhs\"}},\"Function\":0},\"Name\":\"Sum(df (2).Total_Revenue_Lakhs)\",\"NativeReferenceName\":\"Sum of Total_Revenue_Lakhs\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Total_Revenue_Lakhs\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#904349'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"70D\"}}}}}],\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 255.23,
+          "width": 445.97,
+          "x": 351.29,
+          "y": 445.97,
+          "z": 8000.00
+        },
+        {
+          "config": "{\"name\":\"cb9b955a0beb7911b00b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":31.560997671652792,\"y\":329.33214961724656,\"z\":4000,\"width\":266.21015427394093,\"height\":126.24399068661117,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"Sum(zomato_restaurants_in_India.photo_count)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"z\",\"Entity\":\"zomato_restaurants_in_India\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"z\"}},\"Property\":\"photo_count\"}},\"Function\":0},\"Name\":\"Sum(zomato_restaurants_in_India.photo_count)\",\"NativeReferenceName\":\"Sum of photo_count\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"z\"}},\"Property\":\"photo_count\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{},\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#F18B92'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"30D\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 126.24,
+          "width": 266.21,
+          "x": 31.56,
+          "y": 329.33,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"d26d7080a1f2f1e5d05e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":351.2876262583963,\"y\":359.52092999882746,\"z\":5000,\"width\":445.9706192733547,\"height\":65.8664299234493,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"df.Category\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"df\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Category\"},\"Name\":\"df.Category\",\"NativeReferenceName\":\"Category\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#DF848A'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"93D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 65.87,
+          "width": 445.97,
+          "x": 351.29,
+          "y": 359.52,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"fb5400668a3a671d56d0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":31.560997671652792,\"y\":10.977738320574884,\"z\":9000,\"width\":300.5155865257375,\"height\":108.40516591567699,\"tabOrder\":9000}}],\"singleVisual\":{\"visualType\":\"image\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"imageUrl\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"ZOMATO.NS_BIG5137552091764086.png\"}}}}}],\"imageScaling\":[{\"properties\":{\"imageScalingType\":{\"expr\":{\"Literal\":{\"Value\":\"'Fit'\"}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 108.41,
+          "width": 300.52,
+          "x": 31.56,
+          "y": 10.98,
+          "z": 9000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ],
+  "theme": "Accessible_Neutral7374245425546317.json"
+}

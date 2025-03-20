@@ -1,0 +1,50 @@
+table 'df (2)'
+	lineageTag: 02345803-052d-476b-8536-a109e9a8cc5b
+
+	column City
+		dataType: string
+		lineageTag: 39c078d5-c975-4767-9a80-e8ffb91400ea
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+	column Total_Orders
+		dataType: int64
+		formatString: 0
+		lineageTag: 01fe9910-91a3-4c80-b619-f575f69cb4ed
+		summarizeBy: sum
+		sourceColumn: Total_Orders
+
+		annotation SummarizationSetBy = Automatic
+
+	column Total_Revenue_Lakhs
+		dataType: double
+		lineageTag: 72f3f14a-13a2-4323-99c9-d03889645626
+		summarizeBy: sum
+		sourceColumn: Total_Revenue_Lakhs
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Average_Order_Value
+		dataType: double
+		lineageTag: d745d069-da86-4c2e-97d3-1e09530976a8
+		summarizeBy: sum
+		sourceColumn: Average_Order_Value
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'df (2)' = m
+		mode: import
+		source =
+				let
+				    Source = Python.Execute("import pandas as pd#(lf)import random#(lf)#(lf)# Sample cities#(lf)cities = ['Bangalore', 'Delhi', 'Mumbai', 'Chennai', 'Hyderabad', 'Kolkata', 'Pune', 'Jaipur', 'Ahmedabad', 'Chandigarh']#(lf)#(lf)# Generate random data for orders and revenue#(lf)data = []#(lf)for city in cities:#(lf)    total_orders = random.randint(5000, 50000)  # Total food orders#(lf)    total_revenue = round(random.uniform(50, 500), 2)  # Revenue in Lakhs (₹)#(lf)    avg_order_value = round(total_revenue * 100000 / total_orders, 2)  # AOV in ₹#(lf)    #(lf)    data.append([city, total_orders, total_revenue, avg_order_value])#(lf)#(lf)# Creating a DataFrame#(lf)df = pd.DataFrame(data, columns=['City', 'Total_Orders', 'Total_Revenue_Lakhs', 'Average_Order_Value'])#(lf)#(lf)df  # This will be used in Power BI#(lf)"),
+				    df1 = Source{[Name="df"]}[Value],
+				    #"Changed Type" = Table.TransformColumnTypes(df1,{{"City", type text}, {"Total_Orders", Int64.Type}, {"Total_Revenue_Lakhs", type number}, {"Average_Order_Value", type number}})
+				in
+				    #"Changed Type"
+

@@ -1,0 +1,23 @@
+model Model
+	culture: en-IN
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-IN
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["zomato_restaurants_in_India","df","df (2)"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.130.930.0 (24.06)
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table zomato_restaurants_in_India
+ref table DateTableTemplate_b71f5e89-9aa6-4e89-b159-da69de783402
+ref table df
+ref table 'df (2)'
+
+ref cultureInfo en-IN
+
